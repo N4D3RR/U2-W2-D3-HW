@@ -7,6 +7,5 @@ $font-size-title: 2.5em;
 @mixin title-big {
   font-size: $font-size-title;
   font-weight: bold;
-
   opacity: 0.5;
 }

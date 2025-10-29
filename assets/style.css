@@ -250,101 +250,30 @@ table {
 }
 
 .btn-blue {
-  padding: 12px 24px;
+  padding: 8px 16px;
   background-color: #0e6cf9;
   color: white;
-  border-radius: 8px;
+  border-radius: 5px;
+  border: none;
   font-weight: 500;
-}
-.btn-blue::after {
-  content: "Approfondisci";
-}
-.btn-blue:hover {
-  transform: translateY(-2px);
 }
 
 .btn-orange {
-  padding: 12px 24px;
+  padding: 8px 16px;
   background-color: #ff8700;
   color: white;
-  border-radius: 8px;
+  border-radius: 5px;
+  border: none;
   font-weight: 500;
-}
-.btn-orange::after {
-  content: "Accedi";
-}
-.btn-orange:hover {
-  transform: translateY(-2px);
 }
 
 .btn-green {
-  padding: 12px 24px;
+  padding: 8px 16px;
   background-color: #4caf50;
   color: white;
-  border-radius: 8px;
+  border-radius: 5px;
+  border: none;
   font-weight: 500;
-}
-.btn-green::after {
-  content: "Contattaci";
-}
-.btn-green:hover {
-  transform: translateY(-2px);
-}
-
-.hero-title {
-  animation: fadeInTitle 0.8s ease-out 0.2s both;
-}
-@keyframes fadeInTitle {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  99.99% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hero-description {
-  animation: fadeInDesc 0.8s ease-out 0.4s both;
-}
-@keyframes fadeInDesc {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  99.99% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hero-buttons {
-  animation: fadeInBtns 0.8s ease-out 0.6s both;
-}
-@keyframes fadeInBtns {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  99.99% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hero-image {
-  animation: fadeInImg 0.8s ease-out 0.8s both;
-}
-@keyframes fadeInImg {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  99.99% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 body {
@@ -357,6 +286,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 3em 5em;
+  height: 5%;
 }
 .navbar .logo {
   font-size: 1em;
@@ -377,20 +307,23 @@ body {
 .hero {
   background-color: #640fc5;
   display: flex;
-  justify-content: center;
-  gap: 4rem;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3em 0 2em 5em;
+  height: 75%;
 }
-.hero .hero-content {
+
+.hero-content {
   flex: 0.5;
 }
-.hero .hero-content .hero-title {
+.hero-content .hero-title {
   font-size: 2.5em;
   font-weight: bold;
   opacity: 0.5;
   color: black;
   margin-bottom: 1.5rem;
 }
-.hero .hero-content .hero-description {
+.hero-content .hero-description {
   color: #f4f4f4;
   font-size: 0.7em;
   margin-bottom: 2rem;
@@ -398,34 +331,42 @@ body {
   opacity: 0.5;
   width: 80%;
 }
-.hero .hero-content .hero-buttons {
+.hero-content .hero-buttons {
   display: flex;
   gap: 1rem;
 }
 
+.hero-image-container {
+  display: flex;
+  align-items: end;
+}
 .hero-image-container img {
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(191, 0, 255, 0.73);
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
 }
 
 .grid-section {
-  padding: 4rem 2rem;
+  display: flex;
+  z-index: 1;
   background-color: white;
+  padding-top: 3em;
+  height: 19%;
 }
-.grid-section .grid-container {
+
+.grid-container {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  max-width: 1400px;
+  max-width: 1000px;
   margin: 0 auto;
 }
-.grid-section .grid-container > * {
+.grid-container > * {
   flex: 0 0 calc((100% - 2rem * (4 - 1)) / 4);
 }
-.grid-section .grid-container .grid-item img {
+.grid-container .grid-item img {
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   width: 100%;
