@@ -14,13 +14,13 @@
 }
 
 // Mixin grid - crea griglia flex
-@mixin grid($items-per-line: 4, $gap: 1rem) {
+@mixin grid($items-per-line: 4, $gap: 1em) {
   display: flex;
   flex-wrap: wrap;
   gap: $gap;
 
   > * {
     flex: 0 0
-      calc((100% - (#{$gap} * (#{$items-per-line} - 1))) / #{$items-per-line});
+      calc((100% - (#{$gap} * (#{$items-per-line} - 1))) / #{$items-per-line}); //non l'ho capito
   }
 }
