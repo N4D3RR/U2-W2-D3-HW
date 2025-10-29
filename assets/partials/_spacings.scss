@@ -1,0 +1,38 @@
+// Sistema di spaziature dinamico
+
+$spacing-base: 8px;
+$sizes: (
+  "sm": 1,
+  "normal": 2,
+  "md": 3,
+  "lg": 4,
+  "xl": 5,
+  "xxl": 6,
+);
+
+// classi di padding e margin
+@each $size-name, $multiplier in $sizes {
+  // Padding block (top e bottom)
+  .padding-block-#{$size-name} {
+    padding-top: $spacing-base * $multiplier;
+    padding-bottom: $spacing-base * $multiplier;
+  }
+
+  // Padding inline (left e right)
+  .padding-inline-#{$size-name} {
+    padding-left: $spacing-base * $multiplier;
+    padding-right: $spacing-base * $multiplier;
+  }
+
+  // Margin block (top e bottom)
+  .margin-block-#{$size-name} {
+    margin-top: $spacing-base * $multiplier;
+    margin-bottom: $spacing-base * $multiplier;
+  }
+
+  // Margin inline (left e right)
+  .margin-inline-#{$size-name} {
+    margin-left: $spacing-base * $multiplier;
+    margin-right: $spacing-base * $multiplier;
+  }
+}

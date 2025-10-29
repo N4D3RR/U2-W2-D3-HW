@@ -1,0 +1,440 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.padding-block-sm {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.padding-inline-sm {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.margin-block-sm {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.margin-inline-sm {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.padding-block-normal {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.padding-inline-normal {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.margin-block-normal {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.margin-inline-normal {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.padding-block-md {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.padding-inline-md {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.margin-block-md {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.margin-inline-md {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.padding-block-lg {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.padding-inline-lg {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.margin-block-lg {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.margin-inline-lg {
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+.padding-block-xl {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.padding-inline-xl {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.margin-block-xl {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.margin-inline-xl {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.padding-block-xxl {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.padding-inline-xxl {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.margin-block-xxl {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.margin-inline-xxl {
+  margin-left: 48px;
+  margin-right: 48px;
+}
+
+.btn-blue {
+  padding: 12px 24px;
+  background-color: #0e6cf9;
+  color: white;
+  border-radius: 8px;
+  font-weight: 500;
+}
+.btn-blue::after {
+  content: "Approfondisci";
+}
+.btn-blue:hover {
+  transform: translateY(-2px);
+}
+
+.btn-orange {
+  padding: 12px 24px;
+  background-color: #ff8700;
+  color: white;
+  border-radius: 8px;
+  font-weight: 500;
+}
+.btn-orange::after {
+  content: "Accedi";
+}
+.btn-orange:hover {
+  transform: translateY(-2px);
+}
+
+.btn-green {
+  padding: 12px 24px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 8px;
+  font-weight: 500;
+}
+.btn-green::after {
+  content: "Contattaci";
+}
+.btn-green:hover {
+  transform: translateY(-2px);
+}
+
+.hero-title {
+  animation: fadeInTitle 0.8s ease-out 0.2s both;
+}
+@keyframes fadeInTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  99.99% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-description {
+  animation: fadeInDesc 0.8s ease-out 0.4s both;
+}
+@keyframes fadeInDesc {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  99.99% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-buttons {
+  animation: fadeInBtns 0.8s ease-out 0.6s both;
+}
+@keyframes fadeInBtns {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  99.99% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-image {
+  animation: fadeInImg 0.8s ease-out 0.8s both;
+}
+@keyframes fadeInImg {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  99.99% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+}
+
+.navbar,
+.hero,
+.grid-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.navbar {
+  background-color: #640fc5;
+  display: flex;
+  justify-content: space-between;
+  padding: 3em 5em;
+}
+.navbar .logo {
+  font-size: 1em;
+  font-weight: bold;
+  color: black;
+}
+.navbar .nav-links {
+  display: flex;
+  gap: 2em;
+  font-size: 0.8em;
+}
+.navbar .nav-links a {
+  color: #f4f4f4;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.hero {
+  background-color: #640fc5;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+.hero .hero-content {
+  flex: 0.5;
+}
+.hero .hero-content .hero-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  opacity: 0.5;
+  color: black;
+  margin-bottom: 1.5rem;
+}
+.hero .hero-content .hero-description {
+  color: #f4f4f4;
+  font-size: 0.7em;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+  opacity: 0.5;
+  width: 80%;
+}
+.hero .hero-content .hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-image-container img {
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(191, 0, 255, 0.73);
+  width: 250px;
+  height: 250px;
+}
+
+.grid-section {
+  padding: 4rem 2rem;
+  background-color: white;
+}
+.grid-section .grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.grid-section .grid-container > * {
+  flex: 0 0 calc((100% - 2rem * (4 - 1)) / 4);
+}
+.grid-section .grid-container .grid-item img {
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,12 @@
+// Variabili font
+
+$font-size-base: 0.7em;
+$font-size-title: 2.5em;
+
+// Mixin per il titolo principale
+@mixin title-big {
+  font-size: $font-size-title;
+  font-weight: bold;
+
+  opacity: 0.5;
+}

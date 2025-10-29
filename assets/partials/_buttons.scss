@@ -1,0 +1,35 @@
+// Sistema di bottoni dinamico
+@use "colors" as *;
+
+$button-colors: (
+  "blue": $btn-blue,
+  "orange": $btn-orange,
+  "green": $btn-green,
+);
+
+$button-labels: (
+  "blue": "Approfondisci",
+  "orange": "Accedi",
+  "green": "Contattaci",
+);
+
+// Genera le 3 classi dei bottoni
+@each $name, $color in $button-colors {
+  .btn-#{$name} {
+    padding: 12px 24px;
+    background-color: $color;
+    color: white;
+    border-radius: 8px;
+    font-weight: 500;
+
+    // Contenuto del bottone
+    &::after {
+      content: map-get($button-labels, $name);
+    }
+
+    // Effetto transform
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}

@@ -1,0 +1,26 @@
+// Mixins generici
+
+// Mixin floating - effetto sollevato
+@mixin floating($border-radius: 12px, $box-shadow: true, $border: null) {
+  border-radius: $border-radius;
+
+  @if $box-shadow {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  @if $border {
+    border: $border;
+  }
+}
+
+// Mixin grid - crea griglia flex
+@mixin grid($items-per-line: 4, $gap: 1rem) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;
+
+  > * {
+    flex: 0 0
+      calc((100% - (#{$gap} * (#{$items-per-line} - 1))) / #{$items-per-line});
+  }
+}

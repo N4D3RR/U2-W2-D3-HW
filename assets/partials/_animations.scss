@@ -1,0 +1,42 @@
+// Animazioni
+// Mixin per animazione fade-in + slide
+@mixin fade-in-animation(
+  $duration: 0.8s,
+  $start-position: -20px,
+  $delay: 0s,
+  $name: fadeIn
+) {
+  animation: $name $duration ease-out $delay both;
+
+  @keyframes #{$name} {
+    0% {
+      opacity: 0;
+      transform: translateY($start-position);
+    }
+    99.99% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+// Animazioni per gli elementi della hero
+.hero-title {
+  @include fade-in-animation($delay: 0.2s, $name: fadeInTitle);
+}
+
+.hero-description {
+  @include fade-in-animation($delay: 0.4s, $name: fadeInDesc);
+}
+
+.hero-buttons {
+  @include fade-in-animation($delay: 0.6s, $name: fadeInBtns);
+}
+
+.hero-image {
+  @include fade-in-animation(
+    $delay: 0.8s,
+    $start-position: 20px,
+    $name: fadeInImg
+  );
+}

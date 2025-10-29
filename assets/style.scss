@@ -1,0 +1,112 @@
+// File principale SCSS
+@use "./partials/reset";
+@use "./partials/spacings";
+@use "./partials/font" as *;
+@use "./partials/colors" as *;
+@use "./partials/buttons";
+@use "./partials/mixins" as *;
+@use "./partials/animations";
+
+//generali
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+}
+.navbar,
+.hero,
+.grid-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+// Navbar semplice
+.navbar {
+  background-color: $bg-hero;
+  display: flex;
+  justify-content: space-between;
+  padding: 3em 5em;
+
+  .logo {
+    font-size: 1em;
+    font-weight: bold;
+    color: black;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2em;
+    font-size: 0.8em;
+
+    a {
+      color: $text-color;
+      text-decoration: none;
+      font-weight: 300;
+    }
+  }
+}
+
+// Hero Section
+.hero {
+  background-color: $bg-hero;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+
+  .hero-content {
+    flex: 0.5;
+
+    .hero-title {
+      @include title-big;
+      color: black;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-description {
+      color: $text-color;
+      font-size: $font-size-base;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+      opacity: 0.5;
+      width: 80%;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+}
+
+.hero-image-container {
+  img {
+    //  mixin floating con bordo chiaro
+    @include floating(
+      $border-radius: 16px,
+      $box-shadow: true,
+      $border: 1px solid rgba(191, 0, 255, 0.73)
+    );
+    width: 250px;
+    height: 250px;
+  }
+}
+
+// Griglia sotto la hero
+.grid-section {
+  padding: 4rem 2rem;
+  background-color: white;
+
+  .grid-container {
+    //  mixin grid con 4 elementi per linea
+    @include grid($items-per-line: 4, $gap: 2rem);
+    max-width: 1400px;
+    margin: 0 auto;
+
+    .grid-item {
+      img {
+        //  mixin floating senza bordo
+        @include floating($border-radius: 12px, $box-shadow: true);
+        width: 100%;
+      }
+    }
+  }
+}
